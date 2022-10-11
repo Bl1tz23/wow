@@ -1,0 +1,5 @@
+.vscode/
+.idea/
+bin/
+wow_client
+wow_server

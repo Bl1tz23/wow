@@ -1,0 +1,14 @@
+FROM golang:1.19-alpine3.16 as builder
+
+ADD . /wow_server
+WORKDIR /wow_server
+
+RUN go build -v -o /tmp/wow_server ./cmd/wow
+
+FROM alpine:3.16
+
+COPY --from=builder /tmp/wow_server /usr/bin/wow_server
+
+RUN chmod +x /usr/bin/wow_server
+
+ENTRYPOINT ["wow_server"]
