@@ -25,7 +25,7 @@ func TestTasksProvider_Verify(t *testing.T) {
 
 	assert.Equal(t, true, ok)
 
-	ok, err = p.Verify([]byte{0, 65, 137, 55, 75, 198, 167, 239, 66, 102, 30, 26, 158 ,17, 21, 207},
+	ok, err = p.Verify([]byte{0, 65, 137, 55, 75, 198, 167, 239, 66, 102, 30, 26, 158, 17, 21, 207},
 		[]byte{0, 0, 0, 0, 0, 0, 10, 154})
 	if err != nil {
 		t.Error(err)

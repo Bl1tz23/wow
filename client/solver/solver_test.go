@@ -22,7 +22,7 @@ func NewVerifierMock() *VerifierMock {
 }
 
 func (v *VerifierMock) Verify(token, nonce []byte) (bool, error) {
-	if v.currentCall % 100 == 0 {
+	if v.currentCall%100 == 0 {
 		return true, nil
 	}
 
